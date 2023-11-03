@@ -5,14 +5,15 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: black;
-  height: 50px;
+  height: 40px;
+  font-size: 10px;
 }
 
 nav {
   background-color: lightblue;
   color: black;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .logo {
@@ -31,4 +32,43 @@ nav {
   display: flex;
   justify-content: space-between;
   gap: 40px;
+}
+
+.features {
+  ul {
+    margin-left: 0;
+    padding-left: 15px;
+  }
+}
+
+.jumbotron {
+  text-align: center;
+  background-image: asset-url('meetingx.png');
+  background-size: cover;
+  color: #fff;
+  font-family: 'Helvetica Neue' !important;
+  font-stretch: expanded;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+
+}
+
+.no-left-padding {
+  padding-left: 0 !important;
+}
+
+.listing {
+  list-style: none;
+  padding-left: 0;
+}
+
+.plans {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
