@@ -5,10 +5,30 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: black;
-  text-align: center;
+  height: 50px;
 }
 
 nav {
-  background-color: yellow;
-  color: white
+  background-color: lightblue;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+}
+.edit {
+  width: 100px;
+  margin-right: 40px;
+  color: black;
+}
+.logout {
+  width: 100px;
+}
+
+.flex-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }

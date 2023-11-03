@@ -1,17 +1,19 @@
-<nav class="navbar navbar-light" id="lalala">
-  <div>
-    <a class="navbar-brand" href="/">Our Logo</a>
-  </div>
-  <div class="d-flex">
-    <div style="padding-left: 10px;">
-      <a class="btn btn-outline-primary" href="/login" role="button">
-      Login
-      </a>
+<nav class="navbar navbar-light d-flex">
+  <div class="mr-auto p-2 logo">PhotoApp</div>
+  <% if current_user %>
+    <div class="flex-items">
+      <div class="edit">
+        <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe,
+        edit_user_registration_path, title: 'Edit Profile' %>
+      </div>
+      <div class="logout">
+        <%= link_to('Logout', destroy_user_session_path,
+        class: 'btn btn-xs btn-danger', title:'Logout', :method => :delete) %>
+      </div>
     </div>
-    <div style="padding-left: 10px;">
-      <a class="btn btn-outline-success" href="/signup" role="button">
-      Sign Up
-      </a>
+  <% else %>
+    <div>
+      <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
     </div>
-  </div>
+  <% end %>
 </nav>
